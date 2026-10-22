@@ -4,12 +4,17 @@
   "description": "REST API for managing users and questions",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "prisma": "prisma",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "db:generate": "prisma generate"
   },
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.0",
     "express-async-errors": "^3.1.1",
+    "prisma": "^5.19.1",
     "tsx": "^4.19.1"
   },
   "devDependencies": {
