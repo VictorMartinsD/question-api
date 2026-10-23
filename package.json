@@ -10,6 +10,9 @@
     "db:studio": "prisma studio",
     "db:generate": "prisma generate"
   },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.19.1",
