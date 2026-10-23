@@ -1,0 +1,200 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: ORM
+meta:
+  id: wrk_8c3be1c8c5ec4579b3a372d71fc14963
+  created: 1792676220522
+  modified: 1792676220522
+  description: ""
+collection:
+  - name: Users
+    meta:
+      id: fld_1dd66804c29d4929ba5c6870634c6ee4
+      created: 1792676228273
+      modified: 1792676228273
+      sortKey: -1792676228273
+      description: ""
+    children:
+      - url: http://localhost:3333/users
+        name: Create
+        meta:
+          id: req_be47643c32c144819d987c590dda8180
+          created: 1792676234854
+          modified: 1792776181510
+          isPrivate: false
+          description: ""
+          sortKey: -1792676234854
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Victor Martins",
+            	"email": "victor@email.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/users
+        name: Index
+        meta:
+          id: req_64ef664da11c4c32a706f950af38b2b5
+          created: 1792703943712
+          modified: 1792776379456
+          isPrivate: false
+          description: ""
+          sortKey: -1792703943712
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/users/039631dd-32c7-49ed-aa91-c61d434190eb
+        name: Show
+        meta:
+          id: req_bfd5868a4c6a4eaaa1c44eb949a960a4
+          created: 1792711767251
+          modified: 1792776389313
+          isPrivate: false
+          description: ""
+          sortKey: -1792690089283
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: " Questions"
+    meta:
+      id: fld_1b7594abd7d245bfb0804e7dc5f706ff
+      created: 1792763292733
+      modified: 1792763292733
+      sortKey: -1792763292733
+      description: ""
+    children:
+      - url: http://localhost:3333/questions
+        name: Create
+        meta:
+          id: req_2cf156b4febd40e0b0dd3f7e60541d36
+          created: 1792763300048
+          modified: 1792771418279
+          isPrivate: false
+          description: ""
+          sortKey: -1792763300048
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title": "Node.js",
+            	"content": "Como inserir no banco com Prisma?",
+            	"user_id": "039631dd-32c7-49ed-aa91-c61d434190eb"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/questions
+        name: Index
+        meta:
+          id: req_354a37879e8b4812b7aea31346340ef4
+          created: 1792770288361
+          modified: 1792776803887
+          isPrivate: false
+          description: ""
+          sortKey: -1792770288361
+        method: GET
+        parameters:
+          - name: title
+            value: orm
+            description: ""
+            disabled: true
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/questions/f4e2b9a6-3cb0-4b56-a35c-93a67187788c
+        name: Update
+        meta:
+          id: req_76382e8268f248e3b41686abf8082471
+          created: 1792771201553
+          modified: 1792777131232
+          isPrivate: false
+          description: ""
+          sortKey: -1792733621880
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title": "Prisma",
+            	"content": "Como inserir no banco com Prisma?"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/questions/f4e2b9a6-3cb0-4b56-a35c-93a67187788c
+        name: Remove
+        meta:
+          id: req_5f0a03a67b2e40bc81e65dd0df810b02
+          created: 1792777360585
+          modified: 1792777397844
+          isPrivate: false
+          description: ""
+          sortKey: -1792718782796
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_cf2403275f5d06ed18cb5510ad00905d4c61530f
+    created: 1792676220524
+    modified: 1792676220524
+environments:
+  name: Base Environment
+  meta:
+    id: env_cf2403275f5d06ed18cb5510ad00905d4c61530f
+    created: 1792676220523
+    modified: 1792676220523
+    isPrivate: false
